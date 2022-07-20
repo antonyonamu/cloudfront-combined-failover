@@ -1,6 +1,21 @@
 # Blog - Improve web application's availability with hybrid failover using CloudFront and Route 53
 
+## Introduction
+
 Companies who architect their applications for high availability introduce redundancy in their origin infrastructure. For example, they deploy redundant origins that can be hosted in two different AWS regions. Very often, they use Amazon CloudFront as an entry point to their application to route traffic to healthy origins. To implement failover mechanisms with CloudFront, developers can either use Route 53’s Failover routing policy (https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-failover) or CloudFront’s native Origin Failover (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html)feature. Both options offer different characteristics in terms of time to failover and added latency. In this blog post, you will learn about each option and how to combine both of them in a hybrid approach to further enhance the availability of your web applications.
+
+## Solution's objectives
+
+The objective of this code, is to allow you to quickly test the benefits of using a hybrid failover solution using Cloudfront Origin Failover and Route53.
+The solution will achieve the following:
+* Create an API Endpoint using AWS API Gateway and Lambda on both Primary and Backup Regions (with custom domain name + certificate)
+* Create a Route53 healthcheck for both API Endpoints
+* Create a Route53 DNS entry, with an Alias for both Primary and Secondary API Endpoint
+* Create two (02) Cloudfront Distributions with the following setup:
+** Setup 1: Configured with Route53 failover dns record as Origin
+** Setup 2: Configured with Origin failover group. Route 53 failover dns record as primary and secondary API gateway as a fallback.
+* Export both Cloudfront distrbutions' domain names to allow you to test both solutions.
+
 
 ## Architecture
 
