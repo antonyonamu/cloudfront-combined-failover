@@ -21,6 +21,7 @@ Required Arguments:
 Deployment example
 * `./deploy.sh eu-west-1 us-east-1 mydomain.com Z0XXXXXXXXXXXX`
 
-To destroy the stack:
-* `./destroy.sh AWS_REGION AWS_BACKUP_REGION DOMAIN_NAME HOSTED_ZONE_ID`   Destroy stack from your Primary and Fallback Region
-* `./destroy.sh eu-west-1 us-east-1 mydomain.com Z0XXXXXXXXXXXX`   Destroy example
+To destroy the stack from your Primary and Fallback Region:
+* `./destroy.sh AWS_REGION AWS_BACKUP_REGION DOMAIN_NAME HOSTED_ZONE_ID`
+Destroy example
+* `./destroy.sh eu-west-1 us-east-1 mydomain.com Z0XXXXXXXXXXXX`
