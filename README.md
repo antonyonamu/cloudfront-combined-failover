@@ -7,6 +7,7 @@ Companies who architect their applications for high availability introduce redun
 ## Solution's objectives
 
 The objective of this code, is to allow you to quickly test the benefits of using a hybrid failover solution using Cloudfront Origin Failover and Route53.
+
 The solution will achieve the following:
 * Create an API Endpoint using AWS API Gateway and Lambda on both Primary and Backup Regions (with custom domain name + certificate)
 * Create a Route53 healthcheck for both API Endpoints
