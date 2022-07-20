@@ -4,7 +4,7 @@ Companies who architect their applications for high availability introduce redun
 
 ## Useful commands
 
-Deploy this stack to your Primary and Fallback Region=
+Deploy this stack to your Primary and Fallback Region:
 * `./deploy.sh AWS_REGION AWS_BACKUP_REGION DOMAIN_NAME HOSTED_ZONE_ID`
 
 Required Arguments:
