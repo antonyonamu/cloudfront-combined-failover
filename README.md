@@ -31,6 +31,8 @@ The solution will achieve the following:
 ## Deploy the solution
 
 Deploy this stack to your Primary and Fallback Region:
+* `git clone https://github.com/csahraoui/cloudfront-combined-failover.git`
+* `cd cloudfront-combined-failover`
 * `./deploy.sh AWS_REGION AWS_BACKUP_REGION DOMAIN_NAME HOSTED_ZONE_ID`
 
 Required Arguments:
