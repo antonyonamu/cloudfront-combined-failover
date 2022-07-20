@@ -6,7 +6,7 @@ import { EndpointType } from 'aws-cdk-lib/aws-apigateway';
 var AppName = 'myapp';
 var Failover = 'PRIMARY';
 
-export class CdkFailoverStack extends Stack {
+export class CdkRegionStack extends Stack {
     constructor(scope: Construct, id: string, props: StackProps & {hostedZoneId: string, domainName: string})  {
       super(scope, id, props);
      
@@ -121,12 +121,12 @@ export class CdkFailoverStack extends Stack {
       // Export Cloudfront Distributions domain names
       if (Failover === 'SECONDARY') {
         new cdk.CfnOutput(this, 'R53-Failover-Distrib-Domain', {
-          value: R53FailoverDistrib.distributionDomainName,
+          value: `https://${R53FailoverDistrib.distributionDomainName}`,
           description: 'Cloudfront Distribution configured with R53 failover origin',
           exportName: 'R53-Failover-Distrib-Domain',
         });
         new cdk.CfnOutput(this, 'Combined-Failover-Distrib-Domain', {
-            value: CombinedDistrib.distributionDomainName,
+            value: `https://${CombinedDistrib.distributionDomainName}`,
             description: 'Cloudfront Distribution configured with Combined failover origin group',
             exportName: 'Combined-Failover-Distrib-Domain',
           });
