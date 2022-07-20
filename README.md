@@ -52,8 +52,13 @@ At the end of the deployment, you can find an export of the FQDN of 2 Cloudfront
 * * Export Name = CombinedFailoverDistribDomain
 
 Outputs:
- `CdkRegionStack.CombinedFailoverDistribDomain = https://XXXXXXX.cloudfront.net`
- `CdkRegionStack.R53FailoverDistribDomain = https://YYYYYYYY.cloudfront.net`
+ `CdkRegionStack.CombinedFailoverDistribDomain = https://XXXXXXX.cloudfront.net/prod`
+ `CdkRegionStack.R53FailoverDistribDomain = https://YYYYYYYY.cloudfront.net/prod`
+
+## Testing
+In order to test both failover solutions, you could use the following bash script. You will need to provide the previously exported Cloudfront Distribution URL 
+
+`./test.sh https://xxxxxxxx.cloudfront.net/prod`
 
 ## Clean Up
 To destroy the stack from your Primary and Fallback Region:

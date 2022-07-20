@@ -120,12 +120,12 @@ export class CdkRegionStack extends Stack {
       // Export Cloudfront Distributions domain names
       if (Failover === 'SECONDARY') {
         new cdk.CfnOutput(this, 'R53-Failover-Distrib-Domain', {
-          value: `https://${R53FailoverDistrib.distributionDomainName}`,
+          value: `https://${R53FailoverDistrib.distributionDomainName}/prod`,
           description: 'Cloudfront Distribution configured with R53 failover origin',
           exportName: 'R53-Failover-Distrib-Domain',
         });
         new cdk.CfnOutput(this, 'Combined-Failover-Distrib-Domain', {
-            value: `https://${CombinedDistrib.distributionDomainName}`,
+            value: `https://${CombinedDistrib.distributionDomainName}/prod`,
             description: 'Cloudfront Distribution configured with Combined failover origin group',
             exportName: 'Combined-Failover-Distrib-Domain',
           });
