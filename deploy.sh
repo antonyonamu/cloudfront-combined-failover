@@ -11,7 +11,7 @@ if [[ $# -ge 4 ]]; then
     exit $?
 else
     echo 1>&2 "###############################################################################"
-    echo 1>&2 "Provide AWS Region, AWS Backup Region, Domain-name and Hosted-Zone-ID as args."
+    echo 1>&2 "Please provide AWS Region, AWS Backup Region, Domain-name and Hosted-Zone-ID as args."
     echo 1>&2 "Additional args are passed through to cdk deploy."
     echo 1>&2 "* Example:   deploy.sh eu-west-1 us-east-1 mydomain.com Z0XXXXXXXXXXXX"
     echo 1>&2 "###############################################################################"
