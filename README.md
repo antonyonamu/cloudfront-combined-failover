@@ -6,6 +6,11 @@ Companies who architect their applications for high availability introduce redun
 
 ![image](https://user-images.githubusercontent.com/46141598/179996740-af1d97c7-52af-48cd-9bea-bcd155d5a3c2.png)
 
+## Solution Requirements
+* Required privileges to create AWS resources in two different regions
+* Public domain hosted on Amazon Route53
+* Node.JS installed (as AWS CDK uses Node.js). Visit https://nodejs.org/ to install.
+* AWS CDK Toolkit installed `npm install -g aws-cdk`
 
 ## Deploy the solution
 
