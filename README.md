@@ -12,8 +12,8 @@ The solution will achieve the following:
 * Create a Route53 healthcheck for both API Endpoints
 * Create a Route53 DNS entry, with an Alias for both Primary and Secondary API Endpoint
 * Create two (02) Cloudfront Distributions with the following setup:
-** Setup 1: Configured with Route53 failover dns record as Origin
-** Setup 2: Configured with Origin failover group. Route 53 failover dns record as primary and secondary API gateway as a fallback.
+  * Setup 1: Configured with Route53 failover dns record as Origin
+  * Setup 2: Configured with Origin failover group. Route 53 failover dns record as primary and secondary API gateway as a fallback.
 * Export both Cloudfront distrbutions' domain names to allow you to test both solutions.
 
 
