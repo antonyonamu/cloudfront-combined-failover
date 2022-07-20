@@ -21,6 +21,16 @@ Required Arguments:
 Deployment example
 * `./deploy.sh eu-west-1 us-east-1 mydomain.com Z0XXXXXXXXXXXX`
 
+At the end of the deployment, you can find an export of the FQDN of 2 Cloudfront distributions:
+* Setup 1: Cloudfront Distribution with Route53 failover DNS record as origin
+* * Export Name = R53FailoverDistribDomain
+* Setup 2: Cloudfront Distribution with Combined Route53 Failover with Cloudfront Origin Failover 
+* * Export Name = CombinedFailoverDistribDomain
+
+`Outputs:
+CdkRegionStack.CombinedFailoverDistribDomain = https://XXXXXXX.cloudfront.net
+CdkRegionStack.R53FailoverDistribDomain = https://YYYYYYYY.cloudfront.net`
+
 To destroy the stack from your Primary and Fallback Region:
 * `./destroy.sh AWS_REGION AWS_BACKUP_REGION DOMAIN_NAME HOSTED_ZONE_ID`
 Destroy example
