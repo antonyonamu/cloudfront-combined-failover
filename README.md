@@ -33,6 +33,7 @@ At the end of the deployment, you can find an export of the FQDN of 2 Cloudfront
 * * Export Name = CombinedFailoverDistribDomain
 
 Outputs:
+
 `CdkRegionStack.CombinedFailoverDistribDomain = https://XXXXXXX.cloudfront.net`
 `CdkRegionStack.R53FailoverDistribDomain = https://YYYYYYYY.cloudfront.net`
 
