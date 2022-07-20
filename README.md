@@ -15,7 +15,7 @@ Companies who architect their applications for high availability introduce redun
 ## Deploy the solution
 
 Deploy this stack to your Primary and Fallback Region:
- `./deploy.sh AWS_REGION AWS_BACKUP_REGION DOMAIN_NAME HOSTED_ZONE_ID`
+* `./deploy.sh AWS_REGION AWS_BACKUP_REGION DOMAIN_NAME HOSTED_ZONE_ID`
 
 Required Arguments:
 * AWS_REGION: Allow you to specify your Primary Region
@@ -24,7 +24,7 @@ Required Arguments:
 * HOSTED_ZONE_ID: This stack will require you to have a public domain name hosted on Amazon Route53. Provide your Hosted Zone ID
 
 Deployment example
- `./deploy.sh eu-west-1 us-east-1 mydomain.com Z0XXXXXXXXXXXX`
+* `./deploy.sh eu-west-1 us-east-1 mydomain.com Z0XXXXXXXXXXXX`
 
 At the end of the deployment, you can find an export of the FQDN of 2 Cloudfront distributions:
 * Setup 1: Cloudfront Distribution with Route53 failover DNS record as origin
@@ -38,7 +38,7 @@ Outputs:
 
 ## Clean Up
 To destroy the stack from your Primary and Fallback Region:
- `./destroy.sh AWS_REGION AWS_BACKUP_REGION DOMAIN_NAME HOSTED_ZONE_ID`
+* `./destroy.sh AWS_REGION AWS_BACKUP_REGION DOMAIN_NAME HOSTED_ZONE_ID`
 
 Destroy example
- `./destroy.sh eu-west-1 us-east-1 mydomain.com Z0XXXXXXXXXXXX`
+* `./destroy.sh eu-west-1 us-east-1 mydomain.com Z0XXXXXXXXXXXX`
